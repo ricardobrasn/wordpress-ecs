@@ -14,6 +14,7 @@ phases:
     
   build: 
     commands: 
+    - REPOSITORY_URI=213392070621.dkr.ecr.sa-east-1.amazonaws.com/ebook 
     - echo Build started on `date` 
     - echo Building the Docker image... 
     # update the following line with the name of your own ECR repository
@@ -22,7 +23,7 @@ phases:
     - docker tag ebook:latest $REPOSITORY_URI:latest
   post_build: 
     commands: 
-    - REPOSITORY_URI=213392070621.dkr.ecr.sa-east-1.amazonaws.com/ebook 
+    
     - echo Build completed on `date` 
     - echo pushing to repo
     # update the following line with the URI of your own ECR repository
