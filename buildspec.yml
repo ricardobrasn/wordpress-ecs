@@ -22,14 +22,15 @@ phases:
     - docker tag ebook:latest $REPOSITORY_URI:latest
   post_build: 
     commands: 
+    - REPOSITORY_URI=213392070621.dkr.ecr.sa-east-1.amazonaws.com/ebook 
     - echo Build completed on `date` 
     - echo pushing to repo
     # update the following line with the URI of your own ECR repository
     - docker push $REPOSITORY_URI:latest
-  
+    - docker push $REPOSITORY_URI:$IMAGE_TAG
     - echo Writing image definitions file... 
     #- printf '[{"ImageURI":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imageDetails.json
-    - printf '[{"name":"wordpress","imageUri":"%s"}]' $REPOSITORY_URI:latest > imageDefinitions.json
+    - printf '[{"name":"wordpress","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imageDefinitions.json
    
 artifacts:
   files:
