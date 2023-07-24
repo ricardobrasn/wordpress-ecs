@@ -1,2 +1,3 @@
-FROM wordpress:6.2.2-fpm
+FROM wordpress:latest
 COPY . /var/www/html/
+EXPOSE 80
