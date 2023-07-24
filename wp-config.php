@@ -20,7 +20,7 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define ('WORDPRESS_CONFIG_EXTRA','WP_ALLOW_MULTISITE');
+define( 'WORDPRESS_CONFIG_EXTRA', 'WP_ALLOW_MULTISITE' );
 
 define( 'DB_NAME', 'sql_dev_wordpress' );
 
