@@ -30,6 +30,7 @@ phases:
     #- printf '[{"ImageURI":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imageDetails.json
     - printf '[{"name":"wordpress","imageUri":"%s"}]' $REPOSITORY_URI:latest > imageDefinitions.json
    
+   
 artifacts:
   files:
     - imageDefinitions.json
