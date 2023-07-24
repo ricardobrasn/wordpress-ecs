@@ -31,8 +31,8 @@ phases:
     - echo Writing image definitions file... 
     #- printf '[{"ImageURI":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imageDefinitions.json
     #- printf '[{"name":"wordpress","imageUri":"%s"}]' $REPOSITORY_URI:latest > imageDefinitions.json
-    - printf '[{"name":"wordpress","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
-    - cat imagedefinitions.json
+    - printf '[{"name":"wordpress","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imageDefinitions.json
+    - cat imageDefinitions.json
 artifacts:
   files:
-    - imagedefinitions.json
+    - imageDefinitions.json
